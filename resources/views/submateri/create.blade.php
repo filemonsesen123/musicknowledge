@@ -34,6 +34,10 @@
                @endforeach
                  </select>
           </div>
+          <div class="form-group">
+              <label for="gambar">Link Image Google Drive</label>
+              <input type="text" class="form-control" name="gambar"/>
+          </div>
           <button type="submit" class="btn btn-primary">Add</button>
       </form>
   </div>
