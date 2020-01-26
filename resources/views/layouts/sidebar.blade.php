@@ -9,8 +9,10 @@
             <li class="active"><a href="/materi">Materi</a></li>
             <li class="active"><a href="/submateri">Sub Materi</a></li>
             <li class="active"><a href="/isimateri">Isi Materi</a></li>
+            <li class="active"><a href="/soal">Soal</a></li>
                         @guest
             <li class="header"><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+            <li class="header"><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                         @else
             <li class="header"><h3>{{ Auth::user()->name }}</h3></li>
             <li class="header"><a class="nav-link" href="{{ route('logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a></li>

@@ -28,6 +28,8 @@ Route::get('/isimateri', 'ApiController@isimateri');
 Route::get('/isimateri/{isimateri}', 'ApiController@showisimateri');
 Route::get('/submateri', 'ApiController@submateri');
 Route::get('/submateri/{submateri}', 'ApiController@showsubmateri');
+Route::get('/soal', 'ApiController@soal');
+Route::get('/soal/{soal}', 'ApiController@showsoal');
 Route::group(['middleware' => 'auth:api'], function(){
 Route::get('/details', 'UserController@details');
 Route::get('/nilai', 'NilaiController@index');

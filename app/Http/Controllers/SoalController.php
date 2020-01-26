@@ -3,18 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Admin;
-use App\Materi;
-use App\IsiMateri;
-use App\SubMateri;
 use App\Soal;
+use App\SubMateri;
 use App\Http\Controllers\Controller; 
 use Validator;
 
-class AdminController extends Controller
-{ 
-
-    /**
+class SoalController extends Controller
+{
+        /**
      * Create a new controller instance.
      *
      * @return void
@@ -23,6 +19,7 @@ class AdminController extends Controller
     {
         $this->middleware('auth');
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -30,12 +27,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-       $admin = Admin::all();
-       $materi = Materi::all();
        $soal = Soal::all();
-       $submateri = SubMateri::all();
-       $isimateri = IsiMateri::all();
-    return view('admin.index', compact('admin','materi','submateri','isimateri','soal'));
+    return view('soal.index', compact('soal'));
     }
 
 
@@ -46,7 +39,8 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('admin.create');
+       $submateri = SubMateri::all();
+    return view('soal.create', compact('submateri'));
     }
 
     /**
@@ -58,17 +52,25 @@ class AdminController extends Controller
     public function store(Request $request)
     {
      $request->validate([
-        'name'=>'required',
-        'email'=>'required',
-        'password'=>'required'
+        'soal'=>'required',
+        'jawaban'=>'required',
+        'id_sub_materi'=>'required',
+        'a'=>'required',
+        'b'=>'required',
+        'c'=>'required',
+        'd'=>'required',
       ]);
-      $admin = new Admin([
-        'name' => $request->get('name'),
-        'email'=> $request->get('email'),
-        'password' => $request->get('password'),
+      $soal = new Soal([
+        'soal' => $request->get('soal'),
+        'jawaban'=> $request->get('jawaban'),
+        'id_sub_materi' => $request->get('id_sub_materi'),
+        'a' => $request->get('a'),
+        'b'=> $request->get('b'),
+        'c' => $request->get('c'),
+        'd' => $request->get('d'),
       ]);
-      $admin->save();
-      return redirect('/admin')->with('success', 'Admin has been added');
+      $soal->save();
+      return redirect('/soal')->with('success', 'Soal has been added');
     }
 
     /**
@@ -90,8 +92,9 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        $admin = Admin::find($id);
-        return view('admin.edit', compact('admin'));
+        $soal = Soal::find($id);
+       $submateri = SubMateri::all();
+        return view('soal.edit', compact('soal','submateri'));
     }
 
     /**
@@ -104,16 +107,23 @@ class AdminController extends Controller
     public function update(Request $request, $id)
     {
      $request->validate([
-        'name'=>'required',
-        'email'=>'required',
-        'password'=>'required'
+        'soal'=>'required',
+        'jawaban'=>'required',
+        'a'=>'required',
+        'b'=>'required',
+        'c'=>'required',
+        'd'=>'required'
       ]);
-        $admin = Admin::find($id);
-        $admin->name = $request->get('name');
-        $admin->email = $request->get('email');
-        $admin->password = $request->get('password');
-      $admin->save();
-      return redirect('/admin')->with('success', 'Admin has been update');
+        $soal = Soal::find($id);
+        $soal->soal = $request->get('soal');
+        $soal->id_sub_materi = $request->get('id_sub_materi');
+        $soal->jawaban = $request->get('jawaban');
+        $soal->a = $request->get('a');
+        $soal->b = $request->get('b');
+        $soal->c = $request->get('c');
+        $soal->d = $request->get('d');
+      $soal->save();
+      return redirect('/soal')->with('success', 'Soal has been update');
         }
 
     /**
@@ -124,9 +134,9 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-     $admin = Admin::find($id);
-     $admin->delete();
+     $soal = Soal::find($id);
+     $soal->delete();
 
-     return redirect('/admin')->with('success', 'Admin has been deleted Successfully');
+     return redirect('/soal')->with('success', 'Soal has been deleted Successfully');
     }
 }

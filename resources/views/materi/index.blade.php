@@ -12,7 +12,7 @@
       {{ session()->get('success') }}  
     </div><br />
   @endif
-  <a href="{{ route('materi.create')}}">Add User</a>
+  <a href="{{ route('materi.create')}}">Add Materi</a>
   <table class="table table-striped">
     <thead>
         <tr>

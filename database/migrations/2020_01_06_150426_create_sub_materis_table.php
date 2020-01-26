@@ -17,6 +17,7 @@ class CreateSubMaterisTable extends Migration
             $table->bigIncrements('id_sub_materi');
             $table->integer('id_materi');
             $table->string('judul_sub_materi');
+            $table->string('gambar_sub_materi');
             $table->timestamps();
         });
     }

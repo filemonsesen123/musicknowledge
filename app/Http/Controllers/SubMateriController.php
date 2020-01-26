@@ -53,11 +53,13 @@ class SubMateriController extends Controller
     {
      $request->validate([
         'submateri'=>'required',
-        'materi'=>'required'
+        'materi'=>'required',
+        'gambar'=>'required'
       ]);
       $submateri = new SubMateri([
         'judul_sub_materi' => $request->get('submateri'),
         'id_materi' => $request->get('materi'),
+        'gambar_sub_materi' => $request->get('gambar'),
       ]);
       $submateri->save();
       return redirect('/submateri')->with('success', 'SubMateri has been added');
@@ -89,6 +91,7 @@ class SubMateriController extends Controller
       ]);
         $submateri = SubMateri::find($id);
         $submateri->judul_sub_materi = $request->get('submateri');
+        $submateri->gambar_sub_materi = $request->get('gambar');
       $submateri->save();
       return redirect('/submateri')->with('success', 'SubMateri has been update');
         }

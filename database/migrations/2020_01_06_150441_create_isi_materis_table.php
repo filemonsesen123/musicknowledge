@@ -28,6 +28,24 @@ class CreateIsiMaterisTable extends Migration
             $table->string('header4')->nullable();
             $table->string('image4')->nullable();
             $table->longText('paragraf4')->nullable();
+            $table->string('header5')->nullable();
+            $table->string('image5')->nullable();
+            $table->longText('paragraf5')->nullable();
+            $table->string('header6')->nullable();
+            $table->string('image6')->nullable();
+            $table->longText('paragraf6')->nullable();
+            $table->string('header7')->nullable();
+            $table->string('image7')->nullable();
+            $table->longText('paragraf7')->nullable();
+            $table->string('header8')->nullable();
+            $table->string('image8')->nullable();
+            $table->longText('paragraf8')->nullable();
+            $table->string('header9')->nullable();
+            $table->string('image9')->nullable();
+            $table->longText('paragraf9')->nullable();
+            $table->string('header10')->nullable();
+            $table->string('image10')->nullable();
+            $table->longText('paragraf10')->nullable();
             $table->timestamps();
         });
     }

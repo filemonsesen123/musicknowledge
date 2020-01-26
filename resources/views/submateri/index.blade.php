@@ -19,6 +19,7 @@
           <td>ID</td>
           <td>ID Materi</td>
           <td>Judul</td>
+          <td>Gambar</td>
           <td>Action</td>
           <td>Action</td>
         </tr>
@@ -29,6 +30,7 @@
             <td>{{$submateri->id_sub_materi}}</td>
             <td>{{$submateri->id_materi}}</td>
             <td>{{$submateri->judul_sub_materi}}</td>
+            <td>{{$submateri->gambar_sub_materi}}</td>
             <td><a href="{{ route('submateri.edit',$submateri->id_sub_materi)}}" class="btn btn-primary">Edit</a></td>
             <td>
                 <form action="{{ route('submateri.destroy', $submateri->id_sub_materi)}}" method="post">

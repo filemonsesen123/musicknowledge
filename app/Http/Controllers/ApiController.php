@@ -6,6 +6,7 @@ use App\Materi;
 use Illuminate\Http\Request;
 use App\IsiMateri;
 use App\SubMateri;
+use App\Soal;
 
 class ApiController extends Controller
 {
@@ -45,5 +46,15 @@ class ApiController extends Controller
     public function showsubmateri(SubMateri $submateri)
     {
         return $submateri;
+    }
+    public function soal(Request $soal)
+    {
+        $id_sub_materi = $soal->id_sub_materi;
+        return Soal::where('id_sub_materi',$id_sub_materi) -> inRandomOrder() -> limit(5) -> get();
+    }
+
+    public function showsoal(Soal $soal)
+    {
+        return $soal;
     }
 }

@@ -8,7 +8,7 @@
 </style>
 <div class="card uper">
   <div class="card-header">
-    Add Share
+    Add Sub Materi
   </div>
   <div class="card-body">
     @if ($errors->any())

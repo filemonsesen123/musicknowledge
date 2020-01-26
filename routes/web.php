@@ -19,6 +19,7 @@ Auth::routes();
 Route::post('/login', 'AuthController@login');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('admin', 'AdminController');
+Route::resource('soal', 'SoalController');
 Route::resource('materi', 'MateriController');
 Route::resource('isimateri', 'IsiMateriController');
 Route::resource('submateri', 'SubMateriController');

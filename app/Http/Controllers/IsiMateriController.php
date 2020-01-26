@@ -53,17 +53,7 @@ class IsiMateriController extends Controller
      $request->validate([
         'submateri'=>'required',
         'header1'=>'required',
-        'image1'=>'required',
         'paragraf1'=>'required',
-        'header2'=>'required',
-        'image2'=>'required',
-        'paragraf2'=>'required',
-        'header3'=>'required',
-        'image3'=>'required',
-        'paragraf3'=>'required',
-        'header4'=>'required',
-        'image4'=>'required',
-        'paragraf4'=>'required',
       ]);
       $isimateri = new IsiMateri([
         'id_sub_materi' => $request->get('submateri'),
@@ -79,6 +69,24 @@ class IsiMateriController extends Controller
         'header4' => $request->get('header4'),
         'image4' => $request->get('image4'),
         'paragraf4' => $request->get('paragraf4'),
+        'header5' => $request->get('header5'),
+        'image5' => $request->get('image5'),
+        'paragraf5' => $request->get('paragraf5'),
+        'header6' => $request->get('header6'),
+        'image6' => $request->get('image6'),
+        'paragraf6' => $request->get('paragraf6'),
+        'header7' => $request->get('header7'),
+        'image7' => $request->get('image7'),
+        'paragraf7' => $request->get('paragraf7'),
+        'header8' => $request->get('header8'),
+        'image8' => $request->get('image8'),
+        'paragraf8' => $request->get('paragraf8'),
+        'header9' => $request->get('header9'),
+        'image9' => $request->get('image9'),
+        'paragraf9' => $request->get('paragraf9'),
+        'header10' => $request->get('header10'),
+        'image10' => $request->get('image10'),
+        'paragraf10' => $request->get('paragraf10'),
       ]);
       $isimateri->save();
       return redirect('/isimateri')->with('success', 'IsiMateri has been added');
@@ -109,15 +117,6 @@ class IsiMateriController extends Controller
         'header1'=>'required',
         'image1'=>'required',
         'paragraf1'=>'required',
-        'header2'=>'required',
-        'image2'=>'required',
-        'paragraf2'=>'required',
-        'header3'=>'required',
-        'image3'=>'required',
-        'paragraf3'=>'required',
-        'header4'=>'required',
-        'image4'=>'required',
-        'paragraf4'=>'required',
       ]);
         $isimateri = IsiMateri::find($id);
         $isimateri->header1 = $request->get('header1');
@@ -132,6 +131,24 @@ class IsiMateriController extends Controller
         $isimateri->header4 = $request->get('header4');
         $isimateri->image4 = $request->get('image4');
         $isimateri->paragraf4 = $request->get('paragraf4');
+        $isimateri->header5 = $request->get('header5');
+        $isimateri->image5 = $request->get('image5');
+        $isimateri->paragraf5 = $request->get('paragraf5');
+        $isimateri->header6 = $request->get('header6');
+        $isimateri->image6 = $request->get('image6');
+        $isimateri->paragraf6 = $request->get('paragraf6');
+        $isimateri->header7 = $request->get('header7');
+        $isimateri->image7 = $request->get('image7');
+        $isimateri->paragraf7 = $request->get('paragraf7');
+        $isimateri->header8 = $request->get('header8');
+        $isimateri->image8 = $request->get('image8');
+        $isimateri->paragraf8 = $request->get('paragraf8');
+        $isimateri->header9 = $request->get('header9');
+        $isimateri->image9 = $request->get('image9');
+        $isimateri->paragraf9 = $request->get('paragraf9');
+        $isimateri->header10 = $request->get('header10');
+        $isimateri->image10 = $request->get('image10');
+        $isimateri->paragraf10 = $request->get('paragraf10');
       $isimateri->save();
       return redirect('/isimateri')->with('success', 'IsiMateri has been update');
         }

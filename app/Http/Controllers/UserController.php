@@ -16,8 +16,7 @@ public $successStatus = 200;
     public function login(){ 
         if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){ 
             $user = Auth::user(); 
-            $success['token'] =  $user->createToken('MyApp')-> accessToken; 
-            return response()->json(['success' => $success,'data' => $user], $this-> successStatus); 
+            return response()->json(['data' => $user], $this-> successStatus); 
         } 
         else{ 
             return response()->json(['error'=>'Unauthorised'], 201); 
@@ -41,11 +40,10 @@ if ($validator->fails()) {
 $input = $request->all(); 
         $input['password'] = bcrypt($input['password']); 
         $user = User::create($input); 
-        $success['token'] =  $user->createToken('MyApp')-> accessToken; 
         $success['name'] =  $user->name;
         $success['email'] =  $user->email;
         $success['id'] =  $user->id;
-return response()->json(['success'=>$success], $this-> successStatus); 
+return response()->json(['data'=>$success], $this-> successStatus); 
     }
 /** 
      * details api 

@@ -12,7 +12,7 @@
       {{ session()->get('success') }}  
     </div><br />
   @endif
-  <a href="{{ route('isimateri.create')}}">Add User</a>
+  <a href="{{ route('isimateri.create')}}">Add Isi Materi</a>
   <table class="table table-striped">
     <thead>
         <tr>

@@ -8,7 +8,7 @@
 </style>
 <div class="card uper">
   <div class="card-header">
-    Edit Share
+    Edit Isi Materi
   </div>
   <div class="card-body">
     @if ($errors->any())
@@ -71,6 +71,78 @@
           <div class="form-group">
               <label for="paragraf4">Paragraf 4</label>
               <textarea type="text" class="form-control" name="paragraf4">{{ $isimateri->paragraf4 }}</textarea>
+          </div>
+          <div class="form-group">
+              <label for="header5">Header 5</label>
+              <input type="text" class="form-control" name="heade5" value="{{ $isimateri->header5 }}" />
+          </div>
+          <div class="form-group">
+              <label for="image5">Link Image Google Drive 5</label>
+              <input type="text" class="form-control" name="image5" value="{{ $isimateri->image5 }}" />
+          </div>
+          <div class="form-group">
+              <label for="paragraf5">Paragraf 5</label>
+              <textarea type="text" class="form-control" name="paragraf5">{{ $isimateri->paragraf5 }}</textarea>
+          </div>
+          <div class="form-group">
+              <label for="header6">Header 6</label>
+              <input type="text" class="form-control" name="header6" value="{{ $isimateri->header6 }}" />
+          </div>
+          <div class="form-group">
+              <label for="image6">Link Image Google Drive 6</label>
+              <input type="text" class="form-control" name="image6" value="{{ $isimateri->image6 }}" />
+          </div>
+          <div class="form-group">
+              <label for="paragraf6">Paragraf 6</label>
+              <textarea type="text" class="form-control" name="paragraf6">{{ $isimateri->paragraf6 }}</textarea>
+          </div>
+          <div class="form-group">
+              <label for="header7">Header 7</label>
+              <input type="text" class="form-control" name="header7" value="{{ $isimateri->header7 }}" />
+          </div>
+          <div class="form-group">
+              <label for="image7">Link Image Google Drive 7</label>
+              <input type="text" class="form-control" name="image7" value="{{ $isimateri->image7 }}" />
+          </div>
+          <div class="form-group">
+              <label for="paragraf7">Paragraf 7</label>
+              <textarea type="text" class="form-control" name="paragraf7">{{ $isimateri->paragraf7 }}</textarea>
+          </div>
+          <div class="form-group">
+              <label for="header8">Header 8</label>
+              <input type="text" class="form-control" name="header8"  value="{{ $isimateri->header8 }}" />
+          </div>
+          <div class="form-group">
+              <label for="image8">Link Image Google Drive 8</label>
+              <input type="text" class="form-control" name="image8" value="{{ $isimateri->image8 }}" />
+          </div>
+          <div class="form-group">
+              <label for="paragraf8">Paragraf 8</label>
+              <textarea type="text" class="form-control" name="paragraf8">{{ $isimateri->paragraf8 }}</textarea>
+          </div>
+          <div class="form-group">
+              <label for="header9">Header 9</label>
+              <input type="text" class="form-control" name="header9" value="{{ $isimateri->header9 }}" />
+          </div>
+          <div class="form-group">
+              <label for="image9">Link Image Google Drive 9</label>
+              <input type="text" class="form-control" name="image9" value="{{ $isimateri->image9 }}" />
+          </div>
+          <div class="form-group">
+              <label for="paragraf9">Paragraf 9</label>
+              <textarea type="text" class="form-control" name="paragraf9">{{ $isimateri->paragraf9 }}</textarea>
+          </div>
+          <div class="form-group">
+              <label for="header10">Header 10</label>
+              <input type="text" class="form-control" name="header10" value="{{ $isimateri->header10 }}" />
+          </div>
+          <div class="form-group">
+              <label for="image10">Link Image Google Drive 10</label>
+              <input type="text" class="form-control" name="image10" value="{{ $isimateri->image10 }}" />
+          </div>
+          <div class="form-group">
+              <label for="paragraf10">Paragraf 10</label>
+              <textarea type="text" class="form-control" name="paragraf10">{{ $isimateri->paragraf10 }}</textarea>
           </div>
         <button type="submit" class="btn btn-primary">Update</button>
       </form>
